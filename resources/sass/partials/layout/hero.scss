@@ -1,0 +1,24 @@
+
+.b-hero{
+
+    background-image:url('../assets/images/jumbotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40vh;
+    
+}
+.container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    
+}
+.button-current{
+        margin-top: 250px;
+        padding: 10px;
+        background-color: $background-blue;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+    }

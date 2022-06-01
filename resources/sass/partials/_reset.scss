@@ -1,0 +1,38 @@
+//@import './header';
+@import './variabili';
+.container{
+    padding: 20px 0;
+    width: 80%;
+    margin: 0 auto;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    li{
+        display: inline-block;
+        margin: 0 10px;
+        a{
+            text-decoration: none;
+            color: #000;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:hover {
+                color: $background-blue;
+                display: block;
+            }
+        }
+        h4{
+            padding: 0 30px;
+            display: flex;
+            border-bottom: 2px solid $background-blue;
+        }
+    }
+}
+.active {
+    color: $background-blue;
+    display: block;
+}
+.fa-magnifying-glass{
+    margin: 0 5px;
+}
