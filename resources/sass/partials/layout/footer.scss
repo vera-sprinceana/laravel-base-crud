@@ -1,6 +1,5 @@
 .b-footer {
     background-image: url('../assets/images/footer-bg.jpg');
-    //background-color: #004d95;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -31,8 +30,10 @@ footer {
                 display: flex;
                 flex-direction: row;
                 color: lightgrey;
-                h3{
+                h5{
                    text-transform: uppercase; 
+                   color: white;
+                   padding: 5px 0;
                 }
                 
             }
@@ -41,16 +42,16 @@ footer {
 }
 
 
-.dc-footer-bg{
-   background-image:url('../assets/images/dc-logo-bg.png') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 450px;
-    height: 500px;
-    margin-top: -100px;
-    margin-left: 60px;
-    padding-right: 20px;
-}
+//  .dc-footer-bg{
+//     background-image:url('../assets/images/dc-logo-bg.png') ;
+//      background-size: cover;
+//      background-repeat: no-repeat;
+//      width: 450px;
+//      height: 300px;
+//      margin-top: -80px;
+//      margin-left: 60px;
+//      padding-right: 20px;
+//  }
 .follow{
     color: $background-blue;
     text-transform: uppercase;

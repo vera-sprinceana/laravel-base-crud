@@ -4,17 +4,6 @@ main{
     background-color: $bg-dark;
 }
 
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 80%;
-   .card{
-    width: calc((100% / 6) - 10px);
-    margin: 5px;
-    }
-}
-
 
  h3{
         color: #fff;
@@ -23,14 +12,6 @@ main{
     width: 100%;
 }
 
-.btn{
-    background-color: $background-blue;
-    color: #fff;
-    margin: 0 auto;
-    display: block;
-    padding: 10px 35px;
-    text-transform: uppercase;
-}
 .bg-dark {
     background-color: black;
     padding: 5px;
@@ -59,4 +40,17 @@ ul{
     .col-4{
         width: 40%;
     }
+}
+
+.button-current{
+    margin-top: -120px;
+    padding: 10px;
+    background-color: $background-blue;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.img-show{
+    margin-top: -400px;
 }

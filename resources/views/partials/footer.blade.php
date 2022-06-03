@@ -5,7 +5,7 @@
                 <div class="col-3">
                     <ul>
                         <li>
-                            <h3>dc comics</h3>
+                            <h5>dc comics</h5>
                         </li>
                         <li>
                             Characters
@@ -29,7 +29,7 @@
                             News
                         </li>
                         <li>
-                            <h3>shop</h3>
+                            <h5>shop</h5>
                         </li>
                         <li>Shop DC</li>
                         <li>Shop DC Collectibles</li>
@@ -38,7 +38,7 @@
                 <div class="col-3">
                     <ul>
                         <li>
-                            <h3>dc</h3>
+                            <h5>dc</h5>
                         </li>
                         <li>Terms Of Use</li>
                         <li>Privacy policy (New)</li>
@@ -56,7 +56,7 @@
                 <div class="col-3">
                     <ul>
                         <li>
-                            <h3>sites</h3>
+                            <h5>sites</h5>
                         </li>
                         <li>DC</li>
                         <li>MAD Magazine</li>
@@ -68,8 +68,8 @@
 
             </div>
             <div>
-                <div class="dc-footer-bg">
-
+                <div class="col-3 dc-footer-bg">
+                
                 </div>
             </div>
 
