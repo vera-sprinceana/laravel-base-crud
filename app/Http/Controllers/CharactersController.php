@@ -35,11 +35,16 @@ class CharactersController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'name' =>'required'
+            ]
+        );
         $data=$request->all();
         $new_character= new Character();
         $new_character->fill($data);
         $new_character->save();
-        return view('fumetti.index');
+        return view('fumetti.show', $new_character);
     }
 
     /**
@@ -48,9 +53,9 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Character $fumetto)
     {
-        $fumetto= Character::findOrFail($id);
+        //$fumetto= Character::findOrFail($id);
         return view('fumetti.show', compact('fumetto'));
     }
 
@@ -60,9 +65,10 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Character $fumetto)
     {
-        //
+        //$fumetto= Character::findOrFail($id);
+        return view('fumetti.edit', compact('fumetto'));
     }
 
     /**
@@ -72,9 +78,19 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Character $fumetto)
     {
-        //
+        $request->validate(
+            [
+                'name' =>'required'
+            ]
+        );
+        
+        $data = $request->all();
+        $fumetto->fill($data);
+        $fumetto->save();
+
+        return redirect()->route('fumetti.show', $fumetto);
     }
 
     /**
@@ -83,8 +99,9 @@ class CharactersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Character $fumetto)
     {
-        //
+        $fumetto->delete();
+        return redirect()->route('fumetti.index')->with('message', "Hai eliminato con successo: $fumetto->name");
     }
 }

@@ -3,6 +3,11 @@
 @section('title', 'fumetti')
 @section('content')
 <main>
+    @if(session('message'))
+        <div class="alert alert-success">
+            {{session('message')}}
+        </div>
+    @endif
     <div class="bg-main">
         <div class="container"> 
             <div class="row d-flex flex-wrap g-5 mt-4">
@@ -12,11 +17,15 @@
                     <div>
                         <img src="{{$fumetto->thumb}} " alt="immagine fumetto">
                         <h5 class="text-white mt-2">{{ $fumetto->title }}</h5>
-                        <a href="{{route('characters.show', $fumetto->id)}}" class="btn btn-primary"> view</a>
+                        <a href="{{route('characters.show', $fumetto->id)}}" class="btn btn-primary">view</a>
+                        <a href="{{route('characters.edit', $fumetto->id)}}" class="btn btn-warning rounded-pill"></a>
+                        <form action="{{route('characters.destroy', $fumetto->id)}}">
+                            @method('DELETE')
+                            @csrf
+                            <button class="btn btn-danger rounded-pill" type="submit"></button>
+                        </form>
                     </div>
                 </div>
-
-
                 @empty
                 <h2>Non ci sono fumetti</h2>
             </div>
